@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order</title>
+    <link rel="stylesheet" href="styles/order.css"></link>
+</head>
+<body>
+    <div class="order">
+        <section>
+            <!-- header -->
+            <div class="header">
+                <h2 class="title">recurring lawn mowing</h2>
+            </div>
+
+            <!-- customer -->
+            <div class="customer">
+                <div class="customer__details">
+                    <div class="customer__details--field">
+                        <p class="field-title">customer</p>
+                        <p>Sujoy Saha</p>
+                    </div>
+                    <div class="customer__details--field">
+                        <p class="field-title">address</p>
+                        <p>Apc Sarani, shibrampally, siliguri</p>
+                    </div>
+                </div>
+                <button class="btn customer__job">view job history</button>
+            </div>
+            <div class="horizontal-line"></div>
+
+            <!-- date -->
+            <form id="orderForm">
+                <div class="date">
+                    <div class="box">
+                        <div class="box__item">
+                            <label class="field-title" for="start_date">started</label>
+                            <input id="start_date" class="box__item--value" type="date" required/>
+                        </div>
+                        <div class="box__item">
+                            <label class="field-title" for="next_date">next service</label>
+                            <input id="next_date" class="box__item--value" type="date" />
+                        </div>
+                        <div class="box__item">
+                            <label class="field-title" for="end_date">end service on</label>
+                            <input id="end_date" class="box__item--value"type="date" required/>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <div class="box__item">
+                            <label class="field-title" for="recurring_interval">recurring interval</label>
+                            <select id="recurring_interval" class="box__item--value">
+                                <option value="0" >Select interval</option>
+                                <option value="14">14</option>
+                                <option value="28">28</option>
+                                <option value="42">42</option>
+                            </select>
+                        </div>
+                        <div class="box__item">
+                            <p class="field-title">pause service</p>
+                            <input id="isPaused" class="box__item--value" type="checkbox"/>
+                        </div>
+                        <div class="box__item" required>
+                            <label class="field-title" for="grass_length">grass length</label>
+                            <select id="grass_length" class="box__item--value" required>
+                                <option value="0">Select length</option>
+                                <option value="2">Less than 2 in</option>
+                                <option value="4">Less than 4 in</option>
+                                <option value="6">Less than 6 in</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="box__total">
+                        <p class="box__total--title">lawn mow total</p>
+                        <div class="box__total__container">
+                            <p id="mow-amount" class="box__total--amount">00.00</p>
+                            <p class="box__total--per">per<span>service</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="horizontal-line"></div>
+
+                <!-- other addon -->
+                <div class="addOn_section container">
+                    <div class="addOn__box box">
+                        <div>
+                            <h2 class="order__title title">manage add ons</h2>
+                        </div>
+
+                        <div class="addOns">
+                            <div class="addOn__items">
+                                <div class="addOn__item">
+                                    <div class="addOn__itemBox">
+                                        <label for="flowerBCU" class="addOn__name field-title">flower bed clean up</label>
+                                        <p class="addOn__amount">100.00</p>
+                                    </div>
+                                    <div class="addOn__btn">
+                                        <input id="flowerBCU"type="checkbox"/>
+                                    </div>
+                                </div>
+
+                                <div class="horizontal-line"></div>
+
+                                <div class="addOn__item">
+                                    <div class="addOn__itemBox">
+                                        <label label="edging" class="addOn__name field-title">edging</p>
+                                        <p class="addOn__amount">120.00</p>
+                                    </div>
+                                    <div class="addOn__btn">
+                                        <input id="edging" type="checkbox"/>
+                                    </div>
+                                </div>
+
+                                <div class="horizontal-line"></div>
+
+                                <div class="addOn__item">
+                                    <div class="addOn__itemBox">
+                                        <label for="cleanUC" class="addOn__name field-title">clean up clippings</label>
+                                        <p class="addOn__amount">80.00</p>
+                                    </div>
+                                    <div class="addOn__btn">
+                                        <input id="cleanUC" type="checkbox"/>
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+                            <div>
+                                <div class="box__total addOn__total">
+                                    <p class="box__total--title">add on total</p>
+                                    <div class="box__total__container">
+                                        <p id="addOn-amount" class="box__total--amount">00.00</p>
+                                        <p class="box__total--per">per<span>service</span></p>
+                                    </div>
+                                </div>
+                                <p class="addOn__desc">view add on description ></p>
+                            </div>
+                        </div>
+
+                        <div class="horizontal-line"></div>
+
+                        <div class="deleteJob">
+                            <div class="deleteJob__checkbox">
+                                <input type="checkbox">
+                                <p>delete job from customer's app</p>
+                            </div>
+                            <p class="deleteJob__text">checking the box will hide the order from customer's app.</p>
+                        </div>
+                    </div>
+
+                    <div class="vertical-line"></div>
+
+                    <div class="box">
+                        <div>
+                            <h2 class="order__title title">order summary</h2>
+                        </div>
+
+                        <div class="orderSummary"></div>
+
+                        <div class="horizontal-line"></div>
+
+                        <div class="orderSummary__item">
+                            <p class="field-title">service total</p>
+                            <p id="total" class="order__amount">00.00</p>
+                        </div>
+
+                        <div class="order__btns">
+                            <button class="btn cancel">cancel</button>
+                            <button type="submit" id="saveOrder" class="btn save">save</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </section>    
+
+        <!-- notes -->
+        <section class="notes">
+            <form id="noteForm">
+                <h2 class="title">notes for provider</h2>
+                <textarea class="notes__textbox"  required>
+                </textarea>
+    
+                <div class="notes__btns">
+                    <button class="btn cancel">cancel</button>
+                    <button class="btn save">save</button>
+                </div>
+            </form>
+
+            <button class="btn notes__edit">edit</button>
+        </section>
+
+        <div id="toast">
+            <p id="msg"></p>
+        </div>
+    </div>
+    <script src="scripts/toast.js"></script>
+    <script src="scripts/itemTemplate.js"></script>
+    <script src="scripts/getOrderSummary.js"></script>
+    <script src="scripts/order.js"></script>
+</body>
+</html>

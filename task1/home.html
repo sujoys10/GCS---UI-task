@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GCS</title>
+    <link rel="stylesheet" href="styles/main.css"></link>
+</head>
+<body>
+    <!-- support -->
+    <div id="support">
+        <p>18000/support</p>
+    </div>
+
+    <!-- navbar -->
+    <div id="navbar">
+        <div class="nav__item nav__menu">
+            <img class="nav__menu-icon" src="assets/icons/menu.png" alt="menu"/>
+        </div>
+
+        <div class="nav__item lg-screen">support/FAQ</div>
+        <div class="nav__item">
+            <div class="nav__brand">
+                <img src="assets/images/pmz-no-sub-r-full-color-copy.png" alt="brand"/>
+            </div>
+        </div>
+        <div class="nav__item lg-screen">
+            <a href="#">sign up</a>
+        </div>
+        <div class="nav__item lg-screen">
+            <a href="#">login</a>
+        </div>
+        <div class="nav__item lg-screen">
+            <a class="nav__work" href="#">work with us</a>
+        </div>
+
+        <!-- sidenav -->
+        <div class="sideNav">
+            <a id="closeNav">&times;</a>
+            <a class="nav__item services">
+                book services <span id="serviceDropdown__sn">&#9662;</span>
+            </a>
+            <a class="nav-item" href="#">support/FAQ</a>
+            <a class="nav-item" href="#">sign up</a>
+            <a class="nav-item" href="#">log in</a>
+            <a class="nav-item" href="#">work with us</a>
+            
+        </div>
+        <div class="nav__item services lg-screen">book services <span id="serviceDropdown">&#9662;</span>
+            <div id="servicesBox">
+                <a href="#">service 1</a>
+                <a href="#">service 2</a>
+                <a href="#">service 3</a>
+                <a href="#">service 4</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- header -->
+    <section class="header">
+        <div class="header__content">
+            <h1 class="header__msg">
+                It has survived not only five centuries,<br>
+                but also the leap into electronic typesetting
+            </h1>
+            <p class="header__desc">
+                desktop publishing software like Aldus PageMaker the leap into electronic<br>
+                including the leap into electronic versions of Lorem Ipsum
+            </p>
+            
+                <form class="header__searchbar"onsubmit="getQuote()">
+                    <input 
+                        type="text"
+                        placeholder="Enter your address"
+                    />
+                    <button type="submit">get a quote</button>
+                </form>
+            
+        </div>
+    </section>
+
+    <!-- service description -->
+    <section class="service">
+        <div class="service__container">
+            <h1>Gutter Cleaning Service</h1>
+            <div class="service__description">
+                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+                <p>If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- procedure -->
+
+    <section id="procedure">
+        <div class="procedure__steps">
+            <img src="assets//images/4-steps.png" alt="procedure" />
+        </div>
+        <div class="triangle"></div>
+    </section>
+
+    <!-- how it works -->
+    <section id="howItWorks">
+        <h1 class="howItWorks__title">how plowz & mowz works</h1>
+        <div class="howItWorks__container">
+            <div class="howItWorks__item">
+                <img src="assets/images/tap-copy.png"/>
+            </div>
+            <div class="howItWorks__item">
+                <img src="assets/images/sched@2x.png"/>
+            </div>
+            <div class="howItWorks__item">
+                <img src="assets/images/photo-copy.png"/>
+            </div>
+        </div>
+    </section>
+    
+    <!-- review -->
+    <section id="review">
+        <div class="review__container">
+            <h1 class="review__title">what neighbours are saying</h1>
+            <div class="review__rating">
+                <img src="assets/images/5-stars.png" alt="5star"/>
+            </div>
+            <div class="review__details">
+                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable.</p>
+            </div>
+            <p class="review__reviewer">Sujoy | Siliguri</p>
+        </div>
+    </section>
+
+    <!-- what to expect -->
+    <section  id="offering" class="conatiner">
+        <div class="subContainer">
+            <h1 class="sectionTitle">gutter cleaning service</h1>
+            <div class="offering__line"></div>
+            <h3 class="offering__title" >What to Expect</h3>
+            <div class="offering__subContainer">
+                <div class="offering__leftBox">
+                    <ul class="offering__details">
+                        <li>There are many variations of passagesmany web sites still in their infancy</li>
+                        <li>There are many variations of passagesmany web sites still in their infancy</li>
+                        <li>There are many variations of passagesmany web sites still in their infancy</li>
+                        <li>There are many variations of passagesmany web sites still in their infancy</li>
+                        <li>There are many variations of passagesmany web sites still in their infancy</li>
+                    </ul>
+                </div>
+                <div class="offering__rightBox">
+                    <p>let us know if you would like to add nay service we would give you a quote according to that.</p>
+                    <a class="button">view all services ></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- order section -->
+    <section id="order">  
+        <div class="order__container">
+            <div class="order__mobileMock">
+                <img src="assets/images/phone-mockup.png" />
+            </div>
+            <div class="order__box">
+                <h1>Looking for upgrading <br>your lawn</h1>
+                <a href="#" class="button">order now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- media coverage -->
+    <section id="mediaCover">
+        <div class="media subContainer">
+            <img src="assets/images/footer.png" alt="media"/>
+        </div>
+    </section>
+    <script src="scripts/main.js"></script>
+</body>
+</html>

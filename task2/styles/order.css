@@ -1,0 +1,318 @@
+/* base */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1.4rem;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* class */
+
+.container {
+    padding: 1rem 0;
+    display: flex;
+    
+}
+.horizontal-line {
+    height: 1px;
+    background: #ccc;
+    border-radius: 2px;
+    width: 100%;
+    margin: auto;
+    margin-bottom: .5rem;
+}
+
+.vertical-line {
+    height: auto;
+    width: 1px;
+    background: #ccc;
+    margin: 0 3rem;
+}
+
+.order {
+    max-width: 800px;
+    margin: auto;
+    position: relative;
+}
+
+.title {
+    font-size: 1.8rem;
+    text-transform: capitalize;
+    color: yellowgreen;
+}
+
+.field-title {
+    margin-right: 0.8rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.btn {
+    padding: .3rem 1.5rem;
+    text-transform: uppercase;
+    border: 1px solid #ccc;
+}
+
+.save {
+    background-color: yellowgreen;
+    color: white;
+}
+
+.cancel {
+    background-color: red;
+    color: white;
+}
+
+input, select {
+    border: 1px solid #808080;
+    border-radius: 3px;
+}
+
+/* header */
+
+
+.header {
+    background: whitesmoke;
+    padding: 1rem;
+    text-transform: capitalize;
+    margin: 0 -1.2rem;
+}
+
+/* bill */
+
+section {
+    border: 1px solid #ccc;
+    padding: 0 1.2rem;
+    padding-bottom: .8rem;
+    margin: 1.5rem 0;
+    box-shadow: 3px 3px 3px -2px #ccc;
+    -moz-box-shadow: 3px 3px 3px -2px #ccc;
+    -webkit-box-shadow: 3px 3px 3px -2px #ccc;
+}
+
+/* customer */
+.customer {
+    padding: 2rem;
+    position: relative;
+
+}
+
+.customer__details--field * {
+    display: inline;
+    font-size: 1.2rem;
+}
+
+.customer__title p {
+    margin-bottom: 1.5rem;
+}
+
+.customer__job {
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+    font-size: 1rem;
+}
+
+/* dates */
+.date {
+    padding: .5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 30%;
+}
+
+.box__item {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+
+.box__item--value {
+    width: 10rem;
+    padding: 3px;
+}
+
+.box__item input[type="date"] {
+    padding: 1px;
+}
+
+.box__total {
+    border: 1px solid #ccc;
+    padding: 2rem 1rem;
+}
+
+.box__total--title {
+    text-transform: capitalize;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.box__total__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.box__total--amount {
+    font-size: 2rem;
+    color: yellowgreen;
+}
+
+.box__total--per {
+    font-size: .8rem;
+}
+.box__total--per span {
+    display: block;
+    
+}
+
+/* addOn_section */
+
+.order__title {
+    margin-bottom: .5rem;
+}
+
+.order__text {
+    font-size: 1.2rem;
+}
+
+.addOn__box {
+    width: 55%;
+}
+
+.addOns {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.addOn__item {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1rem;
+}
+
+.addOn__itemBox {
+    margin-right: 0.8rem;
+}
+
+.addOn__name {
+    margin-right: 0;
+}
+
+.addOn__amount {
+    text-align: end;
+    font-size: 1.2rem;
+}
+
+.addOn__desc {
+    color: cornflowerblue;
+    margin-top: 1rem;
+}
+
+/* delete job */
+
+.deleteJob__checkbox p{
+    display: inline;
+    margin-right: 1rem;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.deleteJob__text {
+    font-size: 1.2rem;
+}
+
+/* order summary */
+
+.orderSummary__item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.order__amount {
+    font-size: 1.2rem;
+}
+
+/* order btns */
+
+.order__btns {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.order__btns *{
+    width: 45%;
+}
+
+/* notes */
+.notes {
+    padding: 1rem;
+    position: relative;
+}
+
+.notes__textbox {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    width: 60%;
+    height: 5rem;
+}
+
+.notes__btns {
+    display: flex;
+    justify-content: space-between;
+    width: 35%;
+    margin-top: .5rem;
+}
+
+.notes__btns * {
+    width: 45%;
+}
+
+.notes__edit {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+}
+
+#toast {
+    display: none;
+    position: fixed;
+    top: 0px;
+    left: 8%;
+    width: 80%;
+    padding: 1rem;
+    background-color: green;
+
+}
+
+#msg {
+    text-align: center;
+    text-transform: capitalize;
+    color: white;
+}
